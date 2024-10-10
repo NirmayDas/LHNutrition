@@ -3,11 +3,37 @@ import { StyleSheet,
         View, 
         TouchableOpacity,
         ScrollView,
+        Share
         } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import {Card, TextInput} from 'react-native-paper';
 
 export default function Summary({route, navigation}) {
+  var date = new Date().getDate(); //To get the Current Date
+  var month = new Date().getMonth() + 1; //To get the Current Month
+  var year = new Date().getFullYear(); //To get the Current Year
+  var dateString = month + '/'+ date+'/' + year+':'
+  const onShare = async () => {
+    try {
+      const result = await Share.share({
+        message:
+          dateString + '\n' + contentAlert + '\n' + 'Breakfast: \n' + totalBreakfast + 'Lunch: \n' + totalLunch + 'Dinner: \n' + totalDinner + 'Custom Foods: \n' + totalCustom
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // shared with activity type of result.activityType
+        } else {
+          // shared
+        }
+      } else if (result.action === Share.dismissedAction) {
+        // dismissed
+      }
+    } catch (error) {
+      Alert.alert(error.message);
+    }
+  };
+
 
   const {contentAlert} = route.params;
   const {totalCal} = route.params;
@@ -114,16 +140,20 @@ return (
     <Text style={{fontSize: 18}}>{totalCustom}</Text>
   </View>
 
+  <View>
+  <TouchableOpacity onPress={onShare}>
+     <Card style={styles.wrapButton}>
+        <Text style={{fontSize: 20}}> Export Data</Text>
+     </Card>
+  </TouchableOpacity>
+  </View>
+
   <Text></Text>
   <Text></Text>
   <Text></Text>
   <Text></Text>
 
 </ScrollView>
-
-
-
-
 </View>
 
   );
@@ -141,7 +171,16 @@ const styles = StyleSheet.create({
     flex: '1',
     backgroundColor: '#df903b',
 }, 
-  lineSeparatorBold: {
+wrapButton:{
+  width: '100%',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding:16,
+  backgroundColor: '#C4580C',
+  borderRadius: 20,
+  borderColor: "black",
+  borderWidth: 2,},
+lineSeparatorBold: {
   height: 5,              //thickness
   backgroundColor: 'black',
   marginVertical: 10,     //space around line
