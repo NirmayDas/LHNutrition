@@ -5,6 +5,9 @@ import { StyleSheet,
         Button,
         TouchableOpacity,
       Dimensions} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 const halfLH = require("../assets/halflonghorn.png")
 const halfLH2 = require("../assets/halflonghorn2.png")
@@ -15,8 +18,14 @@ export default function HomeScreen({navigation}) {
   
   return (
   <View style={styles.Background}>
-    <View>
-    </View>
+    <SafeAreaView style={styles.iconContainer}>
+
+    <TouchableOpacity onPress={()=>alert('Account creation coming soon, unavailable for now')}>
+    <Icon name="user" size={40} color="black"/>
+    </TouchableOpacity>
+
+    </SafeAreaView>
+    
 
     <View style={styles.Top}>
       <Image source={halfLH} style={styles.image1}></Image>
@@ -28,7 +37,7 @@ export default function HomeScreen({navigation}) {
         <Text style={styles.Title1}> Longhorn </Text>
       </Text>
       <Text style={styles.baseText}>
-        <Text style={styles.Title2}> Meal Tracker</Text>
+        <Text style={styles.Title2}> Nutrition</Text>
       </Text>
     </View>
 
@@ -51,6 +60,11 @@ export default function HomeScreen({navigation}) {
 const styles = StyleSheet.create({
   baseText: {
     fontFamily: 'Georgia',
+  },
+  iconContainer: {
+    position: 'absolute',
+    top: 20, 
+    left: 20, 
   },
   Background: {
     flex:"1",
@@ -91,7 +105,7 @@ const styles = StyleSheet.create({
     flexDirection:'row',
   },
   Title2: {
-    fontSize: 35,
+    fontSize: 43,
     fontWeight: 'bold',
     textAlign:'center',
     flexDirection:'row',
