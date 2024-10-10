@@ -16,6 +16,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Tracking({navigation}) {
+  
+
   const [data, setData] = useState([])
   const [loading,setLoading] = useState(true)
   const [activeCategory, setActiveCategory] = useState('1')
@@ -33,10 +35,15 @@ export default function Tracking({navigation}) {
     {id: '4', nameOfMenu: 'Custom', screenID: 'Custom'},]
   const lineData = [
       {id: '18', nameOfLine: 'Everything', DH:1, b:true,l:true,d:true},
-      {id: '36', nameOfLine: 'JCL WOK', DH:1, b:true,l:true,d:true},
+      {id: '36', nameOfLine: 'JCL Deli', DH:1, b:true,l:true,d:true}, 
       {id: '37', nameOfLine: 'JCL Comfort', DH:1, b:true,l:true,d:true},
       {id: '38', nameOfLine: 'JCL Vegan Line', DH:1, b:true,l:true,d:true},
       {id: '39', nameOfLine: 'JCL Grill', DH:1, b:true,l:true,d:true},
+      {id: '40', nameOfLine: 'JCL WOK', DH:1, b:true,l:true,d:true},
+      {id: '41', nameOfLine: 'JCL Salad Bar', DH:1, b:true,l:true,d:true},
+      {id: '42', nameOfLine: 'JCL Soup & Bread', DH:1, b:true,l:true,d:true},
+      //id: '43', nameOfLine: 'JCL Fresh Fruit', DH:1, b:true,l:true,d:true},
+      {id: '44', nameOfLine: 'JCL Dessert', DH:1, b:true,l:true,d:true},
 
       {id: '1', nameOfLine: 'Everything', DH:2, b:true,l:true,d:true},
       {id: '2', nameOfLine: 'Breakfast Bakery', DH:2, b:true,l:false,d:false},
@@ -269,8 +276,6 @@ export default function Tracking({navigation}) {
             + '\n' 
             + 'Sugar: ' + totalSugar.toFixed(1) + 'g' 
             + '\n' 
-            + '\n' 
-            + 'Items: ' + '\n' + totalFood
     })
     navigation.navigate('Summary', {totalCal: totalCal,
                                     totalProt:totalProt.toFixed(1),
