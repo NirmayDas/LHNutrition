@@ -144,9 +144,6 @@ export default function Tracking({navigation}) {
     //console.log('filteredData')
   }
 
-  //http://127.0.0.1:8000/playground/articles/
-  //https://lhmealtracker.xyz/playground/articles
-  //http://18.227.102.146/playground/articles/
   const loadData = () => {
     fetch('https://lhmealtracker.com/playground/articles/', { //change this link depending where data being stored
       method: "GET"
