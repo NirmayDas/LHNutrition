@@ -55,18 +55,6 @@ The **LH Nutrition App** frontend is built with **React Native** to provide an i
 
 ---
 
-## 🏆 **Contributing**
-Contributions are welcome! To contribute:
-1. Fork the repo  
-2. Create a feature branch:  
-   ```bash
-   git checkout -b feature/YourFeature
-   ```
-3. Commit changes with clear messages  
-4. Push your branch and open a pull request  
-
----
-
 ## 📄 **License**
 This project is for educational use and is **not affiliated** with UT Austin or its dining services.
 
