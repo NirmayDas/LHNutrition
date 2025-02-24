@@ -1,4 +1,4 @@
-# 🍽️ LH Nutrition App - Frontend README
+# 🍽️ LH Nutrition App - Frontend
 
 ## 🔗 **Links**
 - **Backend Repository:** [LH Nutrition Backend](https://github.com/NirmayDas/LH-Nutrition-Backend)  
