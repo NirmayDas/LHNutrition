@@ -29,18 +29,6 @@ The **LH Nutrition App** frontend is built with **React Native** to provide an i
 
 ---
 
-## 📂 **Project Structure**
-```
-├── assets/           # Images and fonts  
-├── components/       # Reusable UI components  
-├── screens/          # App screens (Home, Menu, Tracker)  
-├── services/         # API interaction logic  
-├── App.js            # Main entry point of the app  
-└── package.json      # Project dependencies  
-```
-
----
-
 ## 🖥️ **Installation & Running**
 ### Prerequisites:
 - **Node.js** and **npm** or **yarn** installed  
