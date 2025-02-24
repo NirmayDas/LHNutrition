@@ -66,4 +66,4 @@ This project is for educational use and is **not affiliated** with UT Austin or 
 
 ---
 
-🚀 *Track your meals and stay healthy with LH Nutrition!* 🥗📱
+ *Track your meals and stay healthy with LH Nutrition!* 🥗📱
