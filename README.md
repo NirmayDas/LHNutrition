@@ -1,7 +1,7 @@
 # 🍽️ LH Nutrition App - Frontend
 
 ## 🔗 **Links**
-- ** Demo Video: ** [LH Nutrition Demo Video](https://drive.google.com/file/d/1ImXRq69qS3g4su9dQElgKmxXZKjCt6oM/view?usp=sharing)
+- **Demo Video:** [LH Nutrition Demo Video](https://drive.google.com/file/d/1ImXRq69qS3g4su9dQElgKmxXZKjCt6oM/view?usp=sharing)
 - **Backend Repository:** [LH Nutrition Backend](https://github.com/NirmayDas/LH-Nutrition-Backend)  
 - **App Store:** [LH Nutrition on App Store](https://apps.apple.com/us/app/lh-nutrition/id6654304275)  
 
